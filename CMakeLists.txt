@@ -13,7 +13,7 @@ generate_messages(DEPENDENCIES std_msgs)
 
 ## Declare a catkin package
 catkin_package(
-  INCLUDE_DIRS include
+  #INCLUDE_DIRS include
   LIBRARIES oroca_ros_tutorials
   CATKIN_DEPENDS roscpp std_msgs
   DEPENDS system_lib
