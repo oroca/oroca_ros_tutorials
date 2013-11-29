@@ -29,7 +29,7 @@ int main(int argc, char **argv)                     // 노드 메인 함수
   if (ros_tutorial_service_client.call(srv))
   {
     ROS_INFO("send srv, srv.Request.a and b: %ld, %ld", (long int)srv.request.a, (long int)srv.request.b);
-    ROS_INFO("recieve srv, srv.Response.sum: %ld", (long int)srv.response.sum);
+    ROS_INFO("recieve srv, srv.Response.result: %ld", (long int)srv.response.result);
   }
   else
   {
