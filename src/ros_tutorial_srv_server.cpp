@@ -46,7 +46,7 @@ int main(int argc, char **argv)                     // 노드 메인 함수
 
   ros::NodeHandle nh;                     // ROS 시스템과 통신을 위한 노드 핸들 선언
   
-  nh.setParam("CalculationMethod", PLUS); // 매개변수 초기설정
+  nh.setParam("calculation_method", PLUS); // 매개변수 초기설정
 
   // 서비스 서버 선언, oroca_ros_tutorials 패키지의 srvTutorial 서비스 파일을 이용한
   // 서비스 서버 ros_tutorial_service_server 를 작성한다. 서비스명은 "ros_tutorial_srv" 이며,
@@ -59,7 +59,7 @@ int main(int argc, char **argv)                     // 노드 메인 함수
 
   while (1)
   {
-    nh.getParam("CalculationMethod", g_operator);  // 연산자를 매개변수로부터 받은 값으로 변경한다
+    nh.getParam("calculation_method", g_operator);  // 연산자를 매개변수로부터 받은 값으로 변경한다
     ros::spinOnce();  // 콜백함수 처리루틴
     r.sleep();        // 루틴 반복을 위한 sleep 처리
   }
