@@ -9,12 +9,12 @@
 int g_operator = PLUS;
 
 // 서비스 요청이 있을 경우, 아래의 처리를 수행한다
-// 서비스 요청은 res, 서비스 응답은 req로 설정하였다
+// 서비스 요청은 req, 서비스 응답은 res로 설정하였다
 bool calculation(oroca_ros_tutorials::srvTutorial::Request  &req,
                  oroca_ros_tutorials::srvTutorial::Response &res)
 {
   // 서비스 요청시 받은 a와 b 값을 파라미터값에 따라 연산자를 달리한다.
-  // 계산한 후 서비스 응답값에 저장한다
+  // 계산한 후 서비스 응답 값에 저장한다
   switch(g_operator){
     case PLUS:
          res.result = req.a + req.b; break;
